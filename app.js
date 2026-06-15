@@ -621,9 +621,16 @@ function renderAuthenticatedLayout() {
     switchView('dashboard');
 }
 
-// Toggle desktop sidebar
+// Toggle sidebar (collapsed on desktop, sliding menu drawer on mobile)
 window.toggleSidebar = function() {
-    document.getElementById("app-container").classList.toggle("sidebar-collapsed");
+    const container = document.getElementById("app-container");
+    if (window.innerWidth <= 768) {
+        container.classList.remove("sidebar-collapsed");
+        container.classList.toggle("sidebar-open");
+    } else {
+        container.classList.remove("sidebar-open");
+        container.classList.toggle("sidebar-collapsed");
+    }
 };
 
 // Toggle mobile sidebar
