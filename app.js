@@ -384,10 +384,11 @@ function renderLoginView() {
         </div>
         
         <div class="login-card">
-            <div class="login-logo">
-                <i data-lucide="dumbbell"></i>
-                <h1>AITOR DORRONSORO</h1>
-                <p>Plataforma de Entrenamiento Personal</p>
+            <div class="login-logo" style="margin-bottom: 1.5rem; display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <img src="Imágenes/logo_spartan.jpg" alt="AD Spartan Method Logo" style="width: 130px; height: auto; border-radius: var(--radius-sm); border: 2px solid var(--accent-lime); box-shadow: 0 0 15px rgba(198, 244, 56, 0.2); margin-bottom: 1rem;">
+                <h1 style="font-size: 1.5rem; letter-spacing: 1px; color: var(--text-primary); text-transform: uppercase; margin: 0;">AD Spartan Method</h1>
+                <p style="font-size: 0.85rem; color: var(--accent-lime); font-weight: 600; margin-top: 0.4rem; letter-spacing: 0.5px; line-height: 1.2;">Forja tu cuerpo. Domina tu mente</p>
+                <p style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px; margin-top: 0.35rem; font-weight: 500;">Disciplina. Fuerza. Método</p>
             </div>
             
             <div class="login-type-switch">
@@ -546,9 +547,9 @@ function renderAuthenticatedLayout() {
     appContainer.innerHTML = `
         <aside>
             <div class="sidebar-header">
-                <div class="sidebar-brand">
-                    <i data-lucide="dumbbell"></i>
-                    <span>${isAdmin ? "DorronMethod Admin" : "DorronMethod"}</span>
+                <div class="sidebar-brand" style="display: flex; align-items: center; gap: 8px;">
+                    <img src="Imágenes/logo_spartan.jpg" alt="Logo" style="width: 32px; height: 32px; border-radius: 4px; border: 1px solid var(--accent-lime); object-fit: cover;">
+                    <span style="font-size: 0.825rem; font-weight: 800; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-primary); white-space: nowrap;">${isAdmin ? "AD Spartan Admin" : "AD Spartan Method"}</span>
                 </div>
                 <button class="sidebar-toggle" onclick="toggleSidebar()">
                     <i data-lucide="menu"></i>
@@ -583,6 +584,10 @@ function renderAuthenticatedLayout() {
                 </button>
                 <div class="page-title">
                     <h2 id="header-view-title">Dashboard</h2>
+                </div>
+                <div class="header-slogan-meta">
+                    <span class="slogan-line-1">Forja tu cuerpo. Domina tu mente</span>
+                    <span class="slogan-line-2">Disciplina. Fuerza. Método</span>
                 </div>
                 <div class="header-actions">
                     <div class="current-date">
