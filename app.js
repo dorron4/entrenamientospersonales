@@ -2563,7 +2563,7 @@ function renderClientExercisesView(container, clientId, db) {
     container.innerHTML = `
         <div class="glass-card" style="padding: 0;">
             <div class="table-responsive">
-                <table class="custom-table" style="margin: 0;">
+                <table class="custom-table responsive-table" style="margin: 0;">
                     <thead>
                         <tr>
                             <th style="padding: 12px; width: 80px;">Imagen</th>

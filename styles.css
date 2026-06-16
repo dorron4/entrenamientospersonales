@@ -1425,40 +1425,79 @@ textarea.form-input {
         min-height: 70px;
     }
     
+    /* Style parameters as small horizontal squares/chips */
     .responsive-table tr td:nth-child(3),
     .responsive-table tr td:nth-child(4),
     .responsive-table tr td:nth-child(5),
     .responsive-table tr td:nth-child(6) {
-        display: inline-block;
-        width: auto !important;
-        margin-right: 8px;
+        display: inline-flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.03) !important;
+        border: 1px solid rgba(255, 255, 255, 0.08) !important;
+        border-radius: 8px !important;
+        padding: 8px 10px !important;
+        margin-right: 8px !important;
+        margin-top: 8px !important;
+        min-width: 70px !important;
+        text-align: center !important;
+        vertical-align: top;
     }
     
     .responsive-table tr td:nth-child(3)::before {
-        content: "Series: ";
-        font-size: 0.75rem;
+        content: "Series";
+        font-size: 0.65rem;
+        text-transform: uppercase;
         color: var(--text-muted);
+        margin-bottom: 4px;
+        font-weight: 500;
     }
     .responsive-table tr td:nth-child(4)::before {
-        content: "Reps: ";
-        font-size: 0.75rem;
+        content: "Reps";
+        font-size: 0.65rem;
+        text-transform: uppercase;
         color: var(--text-muted);
+        margin-bottom: 4px;
+        font-weight: 500;
     }
     .responsive-table tr td:nth-child(5)::before {
-        content: "Tiempo: ";
-        font-size: 0.75rem;
+        content: "Tiempo";
+        font-size: 0.65rem;
+        text-transform: uppercase;
         color: var(--text-muted);
+        margin-bottom: 4px;
+        font-weight: 500;
     }
     .responsive-table tr td:nth-child(6)::before {
-        content: "Peso: ";
-        font-size: 0.75rem;
+        content: "Peso";
+        font-size: 0.65rem;
+        text-transform: uppercase;
         color: var(--text-muted);
+        margin-bottom: 4px;
+        font-weight: 500;
+    }
+
+    /* Normalize parameter chip look inside responsive boxes */
+    .responsive-table tr td .parameter-chip {
+        background: transparent !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        font-size: 0.9rem !important;
+        font-weight: 700 !important;
+        color: var(--text-primary) !important;
+    }
+    
+    .responsive-table tr td strong {
+        font-size: 0.9rem !important;
+        font-weight: 700 !important;
     }
     
     .responsive-table tr td:last-child {
         display: block;
         width: 100% !important;
-        margin-top: 0.75rem;
+        margin-top: 1rem;
         clear: both;
     }
 }
